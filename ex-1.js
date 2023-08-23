@@ -1,6 +1,6 @@
 const bills = [
   {
-    id: "1",
+    id: "12",
     transactionDate: "2021-08-01",
     total: 20000,
     location: "Chonburi",
