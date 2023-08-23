@@ -1,3 +1,4 @@
+//ex-4
 const bills = [
   {
     id: "1",
@@ -374,4 +375,18 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const totalMembers = bills
+  .filter(function (bill) {
+    return bill.member !== null;
+  })
+  .map(function (bill) {
+    return bill.member.name;
+  })
+  .reduce(function (accumulator, currentValue) {
+    if (!accumulator.includes(currentValue)) {
+      accumulator.push(currentValue);
+    }
+    return accumulator;
+  }, []).length;
+
+console.log("Unique Members Count: ", totalMembers);

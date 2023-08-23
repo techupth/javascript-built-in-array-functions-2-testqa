@@ -1,6 +1,7 @@
+//ex-1
 const bills = [
   {
-    id: "12",
+    id: "1",
     transactionDate: "2021-08-01",
     total: 20000,
     location: "Chonburi",
@@ -374,3 +375,9 @@ const bills = [
 ];
 
 // Start coding here
+function sum(accumulator, currentValue) {
+  return accumulator + currentValue.total;
+}
+
+let sumTotal = bills.reduce(sum, 0);
+console.log(`Total bill transaction is ${sumTotal}`);

@@ -1,3 +1,4 @@
+//ex-3
 const bills = [
   {
     id: "1",
@@ -374,4 +375,14 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+
+function filterNull(input) {
+  return input.member !== null;
+}
+
+function pullMemberName(input) {
+  return input.member.name;
+}
+
+const billMembers = bills.filter(filterNull).map(pullMemberName);
+console.log("billMembers: ", billMembers);

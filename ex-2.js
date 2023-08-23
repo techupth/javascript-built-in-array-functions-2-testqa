@@ -1,3 +1,4 @@
+//ex-2
 const bills = [
   {
     id: "1",
@@ -375,4 +376,9 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+function filterNull(input) {
+  return input.member !== null;
+}
+
+const newBills = bills.filter(filterNull);
+console.log("newBills: ", newBills);
